@@ -1,0 +1,78 @@
+@import url(../fonts/fonts.css);
+@import url(./normalize.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrapper {
+  width: 315px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services {
+  background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%, rgb(50, 50, 100) 59.861%, rgb(100, 62, 114) 99.841%);
+}
+.services .services-wrap a {
+  color: #24A3FF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+}
+.services .services-wrap .services-title h2 {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: linear-gradient(118.16deg, rgb(240, 20, 90), rgb(239, 128, 128));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.services .services-wrap .services-cards .card .card-logo {
+  background-color: #FFF;
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  padding: 14px;
+  display: flex;
+}
+.services .services-wrap .services-cards .card .card-description h3 {
+  color: #24A3FF;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-bottom: 15px;
+}
+.services .services-wrap .services-cards .card .card-description p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.services .services-wrap .card:not(:last-child) {
+  margin-bottom: 30px;
+}
+.services .services-wrap .card:last-child {
+  padding-bottom: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */

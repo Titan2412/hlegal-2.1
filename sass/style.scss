@@ -1,0 +1,66 @@
+@use "librery";
+@import url(../fonts/fonts.css);
+@import url(./normalize.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.wrapper {
+    width: 315px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services {
+    background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%,
+                    rgb(50, 50, 100) 59.861%,rgb(100, 62, 114) 99.841%);
+    .services-wrap {
+
+        a {
+            @include librery.defaultFont(14px, 17px, 700, #24A3FF);
+            @include librery.linkDecor;
+            text-align: left;
+        }
+        .services-title {
+            h2 {
+                @include librery.defaultFont(30px, 37px, 700, #FFF);
+                background: linear-gradient(118.16deg, rgb(240, 20, 90),rgb(239, 128, 128));
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+        }
+        .services-cards {
+            .card {
+                .card-logo {
+                    background-color: #FFF;
+                    width: 92px;
+                    height: 92px;
+                    border-radius: 24px;
+                    margin-bottom: 30px;
+                    padding: 14px;
+                    display: flex;
+                    
+                }
+                .card-description {
+                    h3 {
+                        @include librery.defaultFont(22px, 27px, 700, #24A3FF);
+                        margin-bottom: 15px
+                    }
+                    p {
+                        @include librery.defaultFont(16px, 26px, 400, #FFF);
+                    }
+                }
+            }
+        }
+        .card:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        .card:last-child {
+            padding-bottom: 60px;
+        }
+    }
+}

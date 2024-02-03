@@ -1,0 +1,13 @@
+@mixin defaultFont ($fs, $lh, $fw, $color) {
+    color: $color;
+    font-family: Montserrat;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@mixin linkDecor {
+    text-decoration: none;
+    text-transform: uppercase;
+}
