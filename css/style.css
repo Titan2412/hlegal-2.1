@@ -61,11 +61,12 @@
 
 .services {
   background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%, rgb(50, 50, 100) 59.861%, rgb(100, 62, 114) 99.841%);
+  padding-top: 30px;
   position: relative;
 }
 .services .services-wrap a {
   color: #24A3FF;
-  font-family: Montserrat;
+  font-family: montserrat, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
@@ -81,7 +82,7 @@
 }
 .services .services-wrap .services-title h2 {
   color: inherit;
-  font-family: Montserrat;
+  font-family: montserrat, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 37px;
@@ -105,7 +106,7 @@
 }
 .services .services-wrap .services-cards .card .card-description h3 {
   color: #24A3FF;
-  font-family: Montserrat;
+  font-family: montserrat, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 27px;
@@ -115,7 +116,7 @@
 }
 .services .services-wrap .services-cards .card .card-description p {
   color: #FFF;
-  font-family: Montserrat;
+  font-family: montserrat, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -160,7 +161,7 @@
 }
 .companies .companies-wrap h3 {
   color: #323264;
-  font-family: Montserrat;
+  font-family: montserrat, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
@@ -191,7 +192,7 @@
   }
   .services .services-wrap .services-title h2 {
     color: inherit;
-    font-family: Montserrat;
+    font-family: montserrat, sans-serif;
     font-size: 38px;
     font-weight: 700;
     line-height: 46px;

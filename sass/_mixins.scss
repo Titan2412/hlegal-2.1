@@ -1,6 +1,6 @@
 @mixin defaultFont ($fs, $lh, $fw, $color) {
     color: $color;
-    font-family: Montserrat;
+    font-family: montserrat, sans-serif;
     font-size: $fs;
     font-weight: $fw;
     line-height: $lh;
