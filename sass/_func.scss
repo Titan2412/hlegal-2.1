@@ -1,0 +1,22 @@
+@use "sass:map";
+
+$companiesImages: (
+    "card1": "#1C4280",
+    "card2": "#143646",
+    "card3": "#F48B30",
+    "card4": "#9E4DC3",
+    "card5": "#FD9339",
+    "card6": "#E2E2E4",
+    "card7": "#C71C36",
+    "card8": "#DCF3F9",
+    "card9": "#EAEAEA",
+    "card10": "#282240",
+    "card11": "#1D4568",
+    "card12": "#000000",
+);
+
+@each $name, $color in $companiesImages {
+    .#{$name} {
+        background-color: #{$color};
+    }
+}

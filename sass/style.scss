@@ -24,17 +24,19 @@
             text-align: left;
         }
         .services-title {
+            margin-bottom: 30px;
+            margin-top: 10px;
+
             h2 {
-                @include librery.defaultFont(30px, 37px, 700, #FFF);
-                background: linear-gradient(118.16deg, rgb(240, 20, 90),rgb(239, 128, 128));
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                margin-bottom: 30px;
-                margin-top: 10px;
+                @include librery.defaultFont(30px, 37px, 700, inherit);
+                @include librery.colorGradient;
             }
         }
         .services-cards {
             .card {
+                display: flex;
+                flex-direction: column;
+                
                 .card-logo {
                     background-color: #FFF;
                     width: 92px;
@@ -42,8 +44,6 @@
                     border-radius: 24px;
                     margin-bottom: 30px;
                     padding: 14px;
-                    display: flex;
-                    
                 }
                 .card-description {
                     h3 {
@@ -61,6 +61,128 @@
         }
         .card:last-child {
             padding-bottom: 60px;
+        }
+    }
+    position: relative;
+
+    .content-shadow {
+        position: relative;
+    }
+    .content-shadow::before {
+        content: '';
+        @include librery.shadow(#CACADB, 20px, 20px);
+    }
+    .content-shadow::after {
+        content: '';
+        @include librery.shadow(#E7E7F2, 40px, 40px);
+        top: 10px;
+    }
+}
+
+.companies {
+    margin-top: 60px;
+    .companies-wrap {
+        h3 {
+            @include librery.defaultFont(14px, 17px, 700, #323264);
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .companies-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 120px);
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            .companies-card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .companies-card:nth-child(n + 7) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: librery.$tablet) {
+    .wrapper {
+        width: 648px;
+    }
+    .services {
+        .services-wrap {
+
+            .services-title {
+                h2 {
+                    @include librery.defaultFont(38px, 46px, 700, inherit);
+                }
+            }
+            .services-cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 60px;
+
+                .card {
+                    margin-bottom: 60px;
+                }
+                .card:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    .companies {
+        .companies-wrap {
+            .companies-cards {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 120px);
+
+                .companies-card:nth-child(n + 7) {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: librery.$notebook) {
+    .wrapper {
+        width: 904px;
+    }
+    .services {
+        .services-wrap {
+            .services-cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 60px;
+            }
+        }
+    }
+    .companies {
+        .companies-wrap {
+            .companies-cards {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 120px);
+            }
+        }
+    }
+}
+@media (min-width: librery.$notebookHd) {
+    .wrapper {
+        width: 1320px;
+    }
+}
+@media (min-width: librery.$desktop) {
+    .wrapper {
+        width: 1600px;
+    }
+    .companies {
+        .companies-wrap {
+            .companies-cards {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
         }
     }
 }

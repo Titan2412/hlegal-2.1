@@ -1,5 +1,53 @@
 @import url(../fonts/fonts.css);
 @import url(./normalize.css);
+.card1 {
+  background-color: #1C4280;
+}
+
+.card2 {
+  background-color: #143646;
+}
+
+.card3 {
+  background-color: #F48B30;
+}
+
+.card4 {
+  background-color: #9E4DC3;
+}
+
+.card5 {
+  background-color: #FD9339;
+}
+
+.card6 {
+  background-color: #E2E2E4;
+}
+
+.card7 {
+  background-color: #C71C36;
+}
+
+.card8 {
+  background-color: #DCF3F9;
+}
+
+.card9 {
+  background-color: #EAEAEA;
+}
+
+.card10 {
+  background-color: #282240;
+}
+
+.card11 {
+  background-color: #1D4568;
+}
+
+.card12 {
+  background-color: #000000;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,6 +61,7 @@
 
 .services {
   background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%, rgb(50, 50, 100) 59.861%, rgb(100, 62, 114) 99.841%);
+  position: relative;
 }
 .services .services-wrap a {
   color: #24A3FF;
@@ -26,8 +75,12 @@
   text-transform: uppercase;
   text-align: left;
 }
+.services .services-wrap .services-title {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
 .services .services-wrap .services-title h2 {
-  color: #FFF;
+  color: inherit;
   font-family: Montserrat;
   font-size: 30px;
   font-weight: 700;
@@ -37,8 +90,10 @@
   background: linear-gradient(118.16deg, rgb(240, 20, 90), rgb(239, 128, 128));
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 30px;
-  margin-top: 10px;
+}
+.services .services-wrap .services-cards .card {
+  display: flex;
+  flex-direction: column;
 }
 .services .services-wrap .services-cards .card .card-logo {
   background-color: #FFF;
@@ -47,7 +102,6 @@
   border-radius: 24px;
   margin-bottom: 30px;
   padding: 14px;
-  display: flex;
 }
 .services .services-wrap .services-cards .card .card-description h3 {
   color: #24A3FF;
@@ -73,6 +127,123 @@
 }
 .services .services-wrap .card:last-child {
   padding-bottom: 60px;
+}
+.services .content-shadow {
+  position: relative;
+}
+.services .content-shadow::before {
+  content: "";
+  background-color: #CACADB;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.services .content-shadow::after {
+  content: "";
+  background-color: #E7E7F2;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  top: 10px;
+}
+
+.companies {
+  margin-top: 60px;
+}
+.companies .companies-wrap h3 {
+  color: #323264;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.companies .companies-wrap .companies-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 120px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.companies .companies-wrap .companies-cards .companies-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companies .companies-wrap .companies-cards .companies-card:nth-child(n+7) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 648px;
+  }
+  .services .services-wrap .services-title h2 {
+    color: inherit;
+    font-family: Montserrat;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .services .services-wrap .services-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+  }
+  .services .services-wrap .services-cards .card {
+    margin-bottom: 60px;
+  }
+  .services .services-wrap .services-cards .card:last-child {
+    padding-bottom: 0;
+  }
+  .companies .companies-wrap .companies-cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 120px);
+  }
+  .companies .companies-wrap .companies-cards .companies-card:nth-child(n+7) {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 904px;
+  }
+  .services .services-wrap .services-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+  }
+  .companies .companies-wrap .companies-cards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 120px);
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1320px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    width: 1600px;
+  }
+  .companies .companies-wrap .companies-cards {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

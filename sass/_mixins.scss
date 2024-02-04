@@ -11,3 +11,18 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+@mixin colorGradient {
+    background: linear-gradient(118.16deg, rgb(240, 20, 90),rgb(239, 128, 128));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+@mixin shadow ($color, $ml, $mr) {
+    background-color: $color;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: $ml;
+    margin-right: $mr;
+}
