@@ -34,11 +34,14 @@
     }
 
     .services-wrap {
-
         a {
             @include librery.defaultFont(14px, 17px, 700, #24A3FF);
             @include librery.linkDecor;
             text-align: left;
+        }
+        a::after {
+            content: url("../images/arrow-right.png");
+            vertical-align: middle
         }
         .services-title {
             margin-bottom: 30px;
@@ -81,6 +84,64 @@
     }
 }
 
+.team {
+    padding-top: 60px;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        img {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        .team-description {
+            padding: 30px;
+            background-color: #EDEDF7;
+
+            h2 {
+                @include librery.defaultFont(30px, 37px, 700, inherit);
+                @include librery.colorGradient;
+                margin-bottom: 30px
+            }
+            h4 {
+                @include librery.defaultFont(16px, 20px, 700, #B3B3BA);
+                margin-bottom: 5px;
+            }
+            a {
+                @include librery.defaultFont(14px, 17px, 700, #24A3FF);
+                @include librery.linkDecor;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+            a::after {
+                content: url("../images/arrow-right.png");
+            }
+            p {
+                @include librery.defaultFont(14px, 22px, 400, #B3B3BA);
+            }
+        }
+    }
+    .slider {
+        display: flex;
+        justify-content: center;
+        column-gap: 15px;
+        padding-top: 30px;
+
+        .slide {
+            background-color: #EDEDF7;
+            width: 16px;
+            height: 16px;
+            border-radius: 10px;
+        }
+        .active {
+            background-color: #006CCF;
+        }
+    }
+}
+
 .companies {
     margin-top: 60px;
     .companies-wrap {
@@ -110,7 +171,6 @@
 
 @media (min-width: librery.$tablet) {
     .wrapper {
-        // width: 648px;
         padding-left: 60px;
         padding-right: 60px;
     }
@@ -126,6 +186,18 @@
             }
         }
     }
+
+    .team {
+        .container {
+            .team-description {
+                h2 {
+                    @include librery.defaultFont(38px, 46px, 700, inherit);
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
     .companies {
         .companies-wrap {
             .companies-cards {
@@ -148,6 +220,22 @@
             }
         }
     }
+
+    .team {
+        .container {
+            grid-template-columns: 1fr 1fr;
+            img {
+
+            }
+            .team-description {
+                h2 {
+                    @include librery.defaultFont(38px, 46px, 700, inherit);
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
     .companies {
         .companies-wrap {
             .companies-cards {
@@ -157,7 +245,27 @@
         }
     }
 }
+
+@media (min-width: librery.$notebookHd) {
+    .team {
+        .container {
+            grid-template-columns: 1fr 2fr;
+            img {
+                max-width: 400px;
+                max-height: 344px;
+            }
+        }
+    }
+}
 @media (min-width: librery.$desktop) {
+    .team {
+        .container {
+            grid-template-columns: 1fr 3fr;
+            img {
+                max-height: 298px;
+            }
+        }
+    }
     .companies {
         .companies-wrap {
             .companies-cards {
