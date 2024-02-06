@@ -8,7 +8,9 @@
 }
 
 .wrapper {
-    width: 315px;
+    max-width: 1600px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -17,6 +19,20 @@
     background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%,
                     rgb(50, 50, 100) 59.861%,rgb(100, 62, 114) 99.841%);
     padding-top: 30px;
+    padding-bottom: 60px;
+    position: relative;
+
+    &::before {
+        content: '';
+        @include librery.shadow(#CACADB, 20px, 20px);
+        top: 100%;
+    }
+    &::after {
+        content: '';
+        @include librery.shadow(#E7E7F2, 40px, 40px);
+        top: calc(100% + 10px);
+    }
+
     .services-wrap {
 
         a {
@@ -34,9 +50,14 @@
             }
         }
         .services-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+
             .card {
                 display: flex;
                 flex-direction: column;
+
                 
                 .card-logo {
                     background-color: #FFF;
@@ -57,26 +78,6 @@
                 }
             }
         }
-        .card:not(:last-child) {
-            margin-bottom: 30px;
-        }
-        .card:last-child {
-            padding-bottom: 60px;
-        }
-    }
-    position: relative;
-
-    .content-shadow {
-        position: relative;
-    }
-    .content-shadow::before {
-        content: '';
-        @include librery.shadow(#CACADB, 20px, 20px);
-    }
-    .content-shadow::after {
-        content: '';
-        @include librery.shadow(#E7E7F2, 40px, 40px);
-        top: 10px;
     }
 }
 
@@ -109,27 +110,19 @@
 
 @media (min-width: librery.$tablet) {
     .wrapper {
-        width: 648px;
+        // width: 648px;
+        padding-left: 60px;
+        padding-right: 60px;
     }
     .services {
         .services-wrap {
-
             .services-title {
                 h2 {
                     @include librery.defaultFont(38px, 46px, 700, inherit);
                 }
             }
             .services-cards {
-                display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-column-gap: 60px;
-
-                .card {
-                    margin-bottom: 60px;
-                }
-                .card:last-child {
-                    padding-bottom: 0;
-                }
             }
         }
     }
@@ -148,15 +141,10 @@
 }
 
 @media (min-width: librery.$notebook) {
-    .wrapper {
-        width: 904px;
-    }
     .services {
         .services-wrap {
             .services-cards {
-                display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-column-gap: 60px;
             }
         }
     }
@@ -169,18 +157,13 @@
         }
     }
 }
-@media (min-width: librery.$notebookHd) {
-    .wrapper {
-        width: 1320px;
-    }
-}
 @media (min-width: librery.$desktop) {
-    .wrapper {
-        width: 1600px;
-    }
     .companies {
         .companies-wrap {
             .companies-cards {
+                max-width: 1720px;
+                margin-left: auto;
+                margin-right: auto;
                 padding-left: 100px;
                 padding-right: 100px;
             }

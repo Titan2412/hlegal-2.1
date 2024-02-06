@@ -54,7 +54,9 @@
 }
 
 .wrapper {
-  width: 315px;
+  max-width: 1600px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -62,7 +64,28 @@
 .services {
   background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%, rgb(50, 50, 100) 59.861%, rgb(100, 62, 114) 99.841%);
   padding-top: 30px;
+  padding-bottom: 60px;
   position: relative;
+}
+.services::before {
+  content: "";
+  background-color: #CACADB;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 100%;
+}
+.services::after {
+  content: "";
+  background-color: #E7E7F2;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: calc(100% + 10px);
 }
 .services .services-wrap a {
   color: #24A3FF;
@@ -91,6 +114,11 @@
   background: linear-gradient(118.16deg, rgb(240, 20, 90), rgb(239, 128, 128));
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.services .services-wrap .services-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
 }
 .services .services-wrap .services-cards .card {
   display: flex;
@@ -122,38 +150,6 @@
   line-height: 26px;
   margin-top: 0;
   margin-bottom: 0;
-}
-.services .services-wrap .card:not(:last-child) {
-  margin-bottom: 30px;
-}
-.services .services-wrap .card:last-child {
-  padding-bottom: 60px;
-}
-.services .content-shadow {
-  position: relative;
-}
-.services .content-shadow::before {
-  content: "";
-  background-color: #CACADB;
-  height: 10px;
-  border-radius: 0 0 12px 12px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.services .content-shadow::after {
-  content: "";
-  background-color: #E7E7F2;
-  height: 10px;
-  border-radius: 0 0 12px 12px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: 40px;
-  margin-right: 40px;
-  top: 10px;
 }
 
 .companies {
@@ -188,7 +184,8 @@
 
 @media (min-width: 768px) {
   .wrapper {
-    width: 648px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .services .services-wrap .services-title h2 {
     color: inherit;
@@ -200,15 +197,7 @@
     margin-bottom: 0;
   }
   .services .services-wrap .services-cards {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 60px;
-  }
-  .services .services-wrap .services-cards .card {
-    margin-bottom: 60px;
-  }
-  .services .services-wrap .services-cards .card:last-child {
-    padding-bottom: 0;
   }
   .companies .companies-wrap .companies-cards {
     grid-template-columns: repeat(3, 1fr);
@@ -219,29 +208,19 @@
   }
 }
 @media (min-width: 1024px) {
-  .wrapper {
-    width: 904px;
-  }
   .services .services-wrap .services-cards {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 60px;
   }
   .companies .companies-wrap .companies-cards {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 120px);
   }
 }
-@media (min-width: 1440px) {
-  .wrapper {
-    width: 1320px;
-  }
-}
 @media (min-width: 1920px) {
-  .wrapper {
-    width: 1600px;
-  }
   .companies .companies-wrap .companies-cards {
+    max-width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 100px;
     padding-right: 100px;
   }

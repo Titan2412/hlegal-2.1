@@ -16,13 +16,11 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-@mixin shadow ($color, $ml, $mr) {
+@mixin shadow ($color, $l, $r) {
     background-color: $color;
     height: 10px;
     border-radius: 0 0 12px 12px;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: $ml;
-    margin-right: $mr;
+    left: $l;
+    right: $r;
 }
