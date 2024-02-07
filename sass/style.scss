@@ -225,6 +225,59 @@
     }
 }
 
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .line {
+        background-color: #E6E6F0;
+        width: 100%;
+        height: 2px;
+        margin-top: 30px;
+    }
+    .street {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        gap: 10px;
+
+        h4 {
+            @include librery.defaultFont(16px, 20px, 400, #323264);
+        }
+        span {
+            @include librery.defaultFont(12px, 15px, 700, #24A3FF);
+        }
+    }
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .email {
+            @include librery.defaultFont(16px, 20px, 700, #24A3FF);
+        }
+        img {
+            width: 38px;
+            height: 38px;
+        }
+        a {
+            @include librery.defaultFont(16px, 20px, 700, #24A3FF);
+            @include librery.linkDecor;
+        }
+    }
+    .copy {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        p {
+            @include librery.defaultFont(16px, 20px, 400, #B3B3BA);
+        }
+    }
+}
 @media (min-width: librery.$tablet) {
     .wrapper {
         padding-left: 60px;
@@ -289,6 +342,49 @@
                     grid-area: news-3;
                 }
             }
+        }
+    }
+    .footer-container {
+        padding-bottom: 30px;
+        grid-template-areas: 
+        "line line"
+        "street copy"
+        "contacts contacts";
+
+        .line {
+            grid-area: line;
+        }
+        .street {
+            flex-direction: row;
+            grid-area: street;
+
+            span::before {
+                content: "";
+                display: inline-block;
+                background-color: #B3B3BA;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+        }
+        .contacts {
+            flex-direction: row;
+            grid-area: contacts;
+
+            a::before {
+                content: "";
+                display: inline-block;
+                background-color: #B3B3BA;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+        }
+        .copy {
+            margin-bottom: 0;
+            grid-area: copy;
         }
     }
 }

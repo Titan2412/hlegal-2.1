@@ -351,6 +351,87 @@
   margin-bottom: 0;
 }
 
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.footer-container .line {
+  background-color: #E6E6F0;
+  width: 100%;
+  height: 2px;
+  margin-top: 30px;
+}
+.footer-container .street {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+.footer-container .street h4 {
+  color: #323264;
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer-container .street span {
+  color: #24A3FF;
+  font-family: montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer-container .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.footer-container .contacts .email {
+  color: #24A3FF;
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer-container .contacts img {
+  width: 38px;
+  height: 38px;
+}
+.footer-container .contacts a {
+  color: #24A3FF;
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.footer-container .copy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.footer-container .copy p {
+  color: #B3B3BA;
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
   .wrapper {
     padding-left: 60px;
@@ -408,6 +489,43 @@
   }
   .publications .publications-container .news-cards .news3 {
     grid-area: news-3;
+  }
+  .footer-container {
+    padding-bottom: 30px;
+    grid-template-areas: "line line" "street copy" "contacts contacts";
+  }
+  .footer-container .line {
+    grid-area: line;
+  }
+  .footer-container .street {
+    flex-direction: row;
+    grid-area: street;
+  }
+  .footer-container .street span::before {
+    content: "";
+    display: inline-block;
+    background-color: #B3B3BA;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  .footer-container .contacts {
+    flex-direction: row;
+    grid-area: contacts;
+  }
+  .footer-container .contacts a::before {
+    content: "";
+    display: inline-block;
+    background-color: #B3B3BA;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  .footer-container .copy {
+    margin-bottom: 0;
+    grid-area: copy;
   }
 }
 @media (min-width: 1024px) {
