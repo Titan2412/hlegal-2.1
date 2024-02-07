@@ -256,7 +256,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 120px);
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 .companies .companies-wrap .companies-cards .companies-card {
   display: flex;
@@ -265,6 +264,91 @@
 }
 .companies .companies-wrap .companies-cards .companies-card:nth-child(n+7) {
   display: none;
+}
+
+.publications {
+  background-color: #F5F5FA;
+  padding-top: 60px;
+}
+.publications .publications-container a {
+  color: #24A3FF;
+  font-family: montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.publications .publications-container a::after {
+  content: url("../images/arrow-right.png");
+  vertical-align: middle;
+}
+.publications .publications-container h2 {
+  color: inherit;
+  font-family: montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: linear-gradient(118.16deg, rgb(240, 20, 90), rgb(239, 128, 128));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.publications .publications-container .news-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+}
+.publications .publications-container .news-cards .news-card {
+  background-color: #FFF;
+  margin-bottom: 30px;
+}
+.publications .publications-container .news-cards .news-card img {
+  width: 100%;
+  height: 200px;
+}
+.publications .publications-container .news-cards .news-card .card-description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 30px;
+}
+.publications .publications-container .news-cards .news-card .card-description h4 {
+  color: #24A3FF;
+  font-family: montserrat, sans-serif;
+  font-size: 16x;
+  font-weight: 700;
+  line-height: 20x;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.publications .publications-container .news-cards .news-card .card-description p {
+  color: #000000;
+  font-family: montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.publications .publications-container .news-cards .news-card .card-description .line {
+  background-color: #E6E6F0;
+  height: 4px;
+  width: 100%;
+}
+.publications .publications-container .news-cards .news-card .card-description .date {
+  color: #B3B3BA;
+  font-family: montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -301,6 +385,30 @@
   .companies .companies-wrap .companies-cards .companies-card:nth-child(n+7) {
     display: flex;
   }
+  .publications .publications-container h2 {
+    color: inherit;
+    font-family: montserrat, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .publications .publications-container .news-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "news-1 news-2" "news-3 news-3";
+    column-gap: 30px;
+  }
+  .publications .publications-container .news-cards .news1 {
+    grid-area: news-1;
+  }
+  .publications .publications-container .news-cards .news2 {
+    grid-area: news-2;
+  }
+  .publications .publications-container .news-cards .news3 {
+    grid-area: news-3;
+  }
 }
 @media (min-width: 1024px) {
   .services .services-wrap .services-cards {
@@ -322,6 +430,19 @@
   .companies .companies-wrap .companies-cards {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 120px);
+  }
+  .publications .publications-container h2 {
+    color: inherit;
+    font-family: montserrat, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .publications .publications-container .news-cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "news-1 news-2 news-3";
   }
 }
 @media (min-width: 1440px) {

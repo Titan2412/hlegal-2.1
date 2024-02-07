@@ -155,7 +155,6 @@
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 120px);
             padding-top: 30px;
-            padding-bottom: 30px;
 
             .companies-card {
                 display: flex;
@@ -164,6 +163,63 @@
             }
             .companies-card:nth-child(n + 7) {
                 display: none;
+            }
+        }
+    }
+}
+
+.publications {
+    background-color: #F5F5FA;
+    padding-top: 60px;
+    .publications-container {
+        a {
+            @include librery.defaultFont(14px, 17px, 700, #24A3FF);
+            @include librery.linkDecor;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        a::after {
+            content: url("../images/arrow-right.png");
+            vertical-align: middle
+        }
+        h2 {
+            @include librery.defaultFont(30px, 37px, 700, inherit);
+            @include librery.colorGradient;
+        }
+        .news-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 30px;
+
+            .news-card {
+                background-color: #FFF;
+                margin-bottom: 30px;
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                }
+                .card-description {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    padding: 30px;
+
+                    h4 {
+                        @include librery.defaultFont(16x, 20x, 700, #24A3FF);
+                    }
+                    p {
+                        @include librery.defaultFont(14px, 22px, 400, #000000);
+                    }
+                    .line {
+                        background-color: #E6E6F0;
+                        height: 4px;
+                        width: 100%;
+                    }
+                    .date {
+                        @include librery.defaultFont(12px, 15px, 700, #B3B3BA);
+                    }
+                }
             }
         }
     }
@@ -210,6 +266,31 @@
             }
         }
     }
+    .publications {
+        .publications-container {
+            h2 {
+                @include librery.defaultFont(38px, 46px, 700, inherit);
+            }
+            .news-cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                "news-1 news-2"
+                "news-3 news-3";
+                column-gap: 30px;
+
+                .news1 {
+                    grid-area: news-1;
+                }
+                .news2 {
+                    grid-area: news-2;
+                }
+                .news3 {
+                    grid-area: news-3;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: librery.$notebook) {
@@ -224,9 +305,7 @@
     .team {
         .container {
             grid-template-columns: 1fr 1fr;
-            img {
 
-            }
             .team-description {
                 h2 {
                     @include librery.defaultFont(38px, 46px, 700, inherit);
@@ -241,6 +320,18 @@
             .companies-cards {
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: repeat(3, 120px);
+            }
+        }
+    }
+    .publications {
+        .publications-container {
+            h2 {
+                @include librery.defaultFont(38px, 46px, 700, inherit);
+            }
+            .news-cards {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: 
+                "news-1 news-2 news-3";
             }
         }
     }
