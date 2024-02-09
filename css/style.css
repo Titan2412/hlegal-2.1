@@ -420,6 +420,7 @@
 .footer-container .copy {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .footer-container .copy p {
