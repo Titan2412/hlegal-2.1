@@ -93,7 +93,7 @@
 
         img {
             width: 100%;
-            height: 500px;
+            height: 100%;
             border-radius: 12px 12px 0px 0px;
         }
 
@@ -206,7 +206,10 @@
                     padding: 30px;
 
                     h4 {
-                        @include librery.defaultFont(16x, 20x, 700, #24A3FF);
+                        @include librery.defaultFont(16px, 20px, 700, #24A3FF);
+                    }
+                    time {
+                        @include librery.defaultFont(12px, 15px, 700, #B3B3BA);
                     }
                     p {
                         @include librery.defaultFont(14px, 22px, 400, #000000);
@@ -215,9 +218,6 @@
                         background-color: #E6E6F0;
                         height: 4px;
                         width: 100%;
-                    }
-                    .date {
-                        @include librery.defaultFont(12px, 15px, 700, #B3B3BA);
                     }
                 }
             }
@@ -436,7 +436,7 @@
 @media (min-width: librery.$notebookHd) {
     .team {
         .container {
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 400px 2fr;
             img {
                 max-width: 400px;
                 max-height: 344px;

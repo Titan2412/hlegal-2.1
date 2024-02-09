@@ -166,7 +166,7 @@
 }
 .team .container img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   border-radius: 12px 12px 0px 0px;
 }
 .team .container .team-description {
@@ -321,9 +321,18 @@
 .publications .publications-container .news-cards .news-card .card-description h4 {
   color: #24A3FF;
   font-family: montserrat, sans-serif;
-  font-size: 16x;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 20x;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.publications .publications-container .news-cards .news-card .card-description time {
+  color: #B3B3BA;
+  font-family: montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -340,15 +349,6 @@
   background-color: #E6E6F0;
   height: 4px;
   width: 100%;
-}
-.publications .publications-container .news-cards .news-card .card-description .date {
-  color: #B3B3BA;
-  font-family: montserrat, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 15px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .footer-container {
@@ -565,7 +565,7 @@
 }
 @media (min-width: 1440px) {
   .team .container {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 400px 2fr;
   }
   .team .container img {
     max-width: 400px;
