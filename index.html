@@ -9,41 +9,64 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <div class="header-contacts">
+                <div class="header-button">
+                    <input type="radio" id="lang-uk" name="interface-lang" value="uk">
+                    <label for="lang-uk" class="lang-button">УК</label>
+                    <input type="radio" id="lang-ru" name="interface-lang" value="ru">
+                    <label for="lang-ru" class="lang-button">РУ</label>
+                    <input type="radio" id="lang-en" name="interface-lang" value="en">
+                    <label for="lang-en" class="lang-button">EN</label>
+                </div>
+                <p>Kyiv, Mechnikova str., 14/1</p>
+                <a href="tel:0800211927">0800 211 927</a>
+                <div class="header-facebook">
+                    <img src="./images/facebook.png" alt="">
+                </div>
+            </div>
+            <div class="header-logo">
+                <img src="./images/logo-mobil.png" class="mobil" alt="">
+                <img src="./images/logo.png" class="tablet" alt="">
+            </div>
+            <div class="header-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+                <nav>
+                    <a href="/">about us</a>
+                    <a href="/">services</a>
+                    <a href="/">team</a>
+                    <a href="/">publications</a>
+                    <a href="/">contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     <main>
         <section class="hero">
-            <div class="hero-container">
-                <div class="header-container">
-                    <div class="header-button">
-                        <input type="radio" id="lang-uk" name="interface-lang" value="uk">
-                        <label for="lang-uk" class="lang-button">УК</label>
-                        <input type="radio" id="lang-ru" name="interface-lang" value="ru">
-                        <label for="lang-ru" class="lang-button">РУ</label>
-                        <input type="radio" id="lang-en" name="interface-lang" value="en">
-                        <label for="lang-en" class="lang-button">EN</label>
+            <div class="hero-background">
+                <div class="wrapper">
+                    <div class="hero-title">
+                        <h1>you legal solutions provider</h1>
                     </div>
-                    <div class="header-contacts">
-                        <a href="tel:0800211927">0800 211 927</a>
-                    </div>
+                    <div class="hero-arrow"></div>
                 </div>
-                <div class="hero-logo">
-                    <img src="./images/logo.png" alt="logo">
-                    <div class="menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="hero-title">
-                    <h1>you legal solutions provider</h1>
-                </div>
-                <div class="button-arrow"></div>
             </div>
         </section>
         <section class="description">
             <div class="wrapper">
                 <div class="category">
-                    <h2>Consistent</h2>
-                    <span></span>
+                    <div class="title-description">
+                        <h2 class="active">Consistent</h2>
+                        <h2>Customer oriented</h2>
+                        <h2>Innovative</h2>
+                        <h2>Business oriented</h2>
+                    </div>
+                    <div class="line">
+                        <span></span>
+                    </div>
                     <div class="category-description">
                         <h2>We turn the idea of legal services</h2>
                         <p>
@@ -149,9 +172,9 @@
                     </div>
                 </div>
                 <div class="slider">
-                    <a href="/" class="slide active"></a>
-                    <a href="/" class="slide"></a>
-                    <a href="/" class="slide"></a>
+                    <button class="slide active"></button>
+                    <button class="slide"></button>
+                    <button class="slide"></button>
                 </div>
             </div>
         </section>
