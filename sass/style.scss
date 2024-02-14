@@ -74,6 +74,11 @@ header {
                     background-color: #E6E6F0;
                     border-radius: 50%;
                 }
+                svg:hover {
+                    path {
+                        fill: #F0145A;
+                    }
+                }
             }
             .header-button {
                 input {
@@ -188,6 +193,7 @@ header {
             h2 {
                 @include librery.defaultFont(30px, 37px, 700, #B3B3BA);
                 margin-right: 30px;
+                margin-left: 30px;
 
             }
             .active {
@@ -202,6 +208,8 @@ header {
             height: 4px;
             margin-top: 30px;
             margin-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
 
             span {
                 width: 100%;
@@ -211,9 +219,12 @@ header {
             }
         }
         .category-description {
+            padding-left: 30px;
+            padding-right: 30px;
+
             h2 {
                 @include librery.defaultFont(20px, 24px, 700, #FFF);
-                margin-bottom: 30px
+                margin-bottom: 30px;
             }
             p {
                 @include librery.defaultFont(19px, 30px, 400, #FFF);
@@ -245,11 +256,18 @@ header {
             @include librery.defaultFont(14px, 17px, 700, #24A3FF);
             @include librery.linkDecor;
             text-align: left;
+
+            &:hover {
+                color: #F0145A;
+
+                svg {
+                    path {
+                        stroke: #F0145A;
+                    }
+                }
+            }
         }
-        a::after {
-            content: url("../images/arrow-right.png");
-            vertical-align: middle
-        }
+
         .services-title {
             margin-bottom: 30px;
             margin-top: 10px;
@@ -467,10 +485,18 @@ footer {
     
             .email {
                 @include librery.defaultFont(16px, 20px, 700, #24A3FF);
+
+                &:hover {
+                    color: #F0145A;
+                } 
             }
-            img {
+            svg {
                 width: 38px;
                 height: 38px;
+
+                &:hover path {
+                    fill: #F0145A;
+                }
             }
             a {
                 @include librery.defaultFont(16px, 20px, 700, #24A3FF);
@@ -562,7 +588,13 @@ footer {
                     margin-right: 30px;
                 }
             }
+            .line {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
             .category-description {
+                padding-left: 60px;
+                padding-right: 60px;
                 h2 {
                     @include librery.defaultFont(30px, 37px, 700, #FFF);
                     margin-bottom: 30px
@@ -705,6 +737,7 @@ footer {
                 }
             }
             .header-nav {
+                padding-top: 0;
                 nav {
                     justify-content: flex-end;
                 }
@@ -714,7 +747,7 @@ footer {
     .hero {
         .hero-background {
             background-image: url('../images/hero-logo-notebook.svg');
-            background-size: contain;
+
         }
     }
     .description {
@@ -727,6 +760,7 @@ footer {
                 align-items: flex-end;
                 gap: 30px;
                 overflow: inherit;
+                padding-left: 60px;
 
                 h2 {
                     margin-right: 0;
@@ -739,11 +773,16 @@ footer {
                 margin-right: 50px;
                 margin-bottom: 0;
                 margin-top: 0;
+                padding-left: 0;
+                padding-right: 0;
     
                 span {
                     width: 4px;
                     height: 100%;
                 }
+            }
+            .category-description {
+                padding-left: 0;
             }
         }
     }
@@ -796,6 +835,11 @@ footer {
 }
 
 @media (min-width: librery.$notebookHd) {
+    .hero {
+        .hero-background {
+            background-size: contain;
+        }
+    }
     .team {
         .container {
             grid-template-columns: 400px 2fr;
@@ -803,6 +847,15 @@ footer {
                 max-width: 400px;
                 max-height: 344px;
             }
+        }
+    }
+    .description {
+        .category {
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 60px;
+            padding-right: 60px;
         }
     }
 }
@@ -818,8 +871,11 @@ footer {
     }
     .description {
         .category {
-            padding-left: 120px;
-            padding-right: 120px;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 160px;
+            padding-right: 160px;
         }
     }
     .team {

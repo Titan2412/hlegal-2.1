@@ -128,6 +128,9 @@ header .header-container .header-contacts .header-facebook::before {
   background-color: #E6E6F0;
   border-radius: 50%;
 }
+header .header-container .header-contacts .header-facebook svg:hover path {
+  fill: #F0145A;
+}
 header .header-container .header-contacts .header-button input {
   display: none;
 }
@@ -253,6 +256,7 @@ header .header-container .header-nav nav a:last-child {
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 30px;
+  margin-left: 30px;
 }
 .description .category .title-description .active {
   background: linear-gradient(118.16deg, rgb(240, 20, 90), rgb(239, 128, 128));
@@ -267,12 +271,18 @@ header .header-container .header-nav nav a:last-child {
   height: 4px;
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .description .category .line span {
   width: 100%;
   height: 4px;
   display: block;
   background-color: rgba(255, 255, 255, 0.3);
+}
+.description .category .category-description {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .description .category .category-description h2 {
   color: #FFF;
@@ -332,9 +342,11 @@ header .header-container .header-nav nav a:last-child {
   text-transform: uppercase;
   text-align: left;
 }
-.services .services-wrap a::after {
-  content: url("../images/arrow-right.png");
-  vertical-align: middle;
+.services .services-wrap a:hover {
+  color: #F0145A;
+}
+.services .services-wrap a:hover svg path {
+  stroke: #F0145A;
 }
 .services .services-wrap .services-title {
   margin-bottom: 30px;
@@ -638,9 +650,15 @@ footer .footer-container .contacts .email {
   margin-top: 0;
   margin-bottom: 0;
 }
-footer .footer-container .contacts img {
+footer .footer-container .contacts .email:hover {
+  color: #F0145A;
+}
+footer .footer-container .contacts svg {
   width: 38px;
   height: 38px;
+}
+footer .footer-container .contacts svg:hover path {
+  fill: #F0145A;
 }
 footer .footer-container .contacts a {
   color: #24A3FF;
@@ -728,6 +746,14 @@ footer .footer-container .copy p {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 30px;
+  }
+  .description .category .line {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .description .category .category-description {
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .description .category .category-description h2 {
     color: #FFF;
@@ -851,12 +877,14 @@ footer .footer-container .copy p {
   header .header-container .header-logo .tablet {
     display: block;
   }
+  header .header-container .header-nav {
+    padding-top: 0;
+  }
   header .header-container .header-nav nav {
     justify-content: flex-end;
   }
   .hero .hero-background {
     background-image: url("../images/hero-logo-notebook.svg");
-    background-size: contain;
   }
   .description .category {
     flex-direction: row;
@@ -867,6 +895,7 @@ footer .footer-container .copy p {
     align-items: flex-end;
     gap: 30px;
     overflow: inherit;
+    padding-left: 60px;
   }
   .description .category .title-description h2 {
     margin-right: 0;
@@ -878,10 +907,15 @@ footer .footer-container .copy p {
     margin-right: 50px;
     margin-bottom: 0;
     margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .description .category .line span {
     width: 4px;
     height: 100%;
+  }
+  .description .category .category-description {
+    padding-left: 0;
   }
   .services .services-wrap .services-cards {
     grid-template-columns: repeat(3, 1fr);
@@ -921,12 +955,22 @@ footer .footer-container .copy p {
   }
 }
 @media (min-width: 1440px) {
+  .hero .hero-background {
+    background-size: contain;
+  }
   .team .container {
     grid-template-columns: 400px 2fr;
   }
   .team .container img {
     max-width: 400px;
     max-height: 344px;
+  }
+  .description .category {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 @media (min-width: 1920px) {
@@ -938,8 +982,11 @@ footer .footer-container .copy p {
     background-image: url("../images/hero-logo-desktop.svg");
   }
   .description .category {
-    padding-left: 120px;
-    padding-right: 120px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 160px;
+    padding-right: 160px;
   }
   .team .container {
     grid-template-columns: 1fr 3fr;
