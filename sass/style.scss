@@ -98,6 +98,7 @@ header {
             display: flex;
             grid-area: logo;
             padding-left: 15px;
+
             .tablet {
                 display: none;
             }
@@ -167,7 +168,7 @@ header {
             right: 50%;
             transform: translate(-50%, -50%);
             bottom: 15px;
-            background-image: url('../images/arrow-white.png');
+            background-image: url('../images/arrow-white.svg');
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -320,6 +321,7 @@ header {
             width: 100%;
             height: 100%;
             border-radius: 12px 12px 0px 0px;
+            object-fit: cover;
         }
 
         .team-description {
@@ -342,7 +344,8 @@ header {
                 margin-bottom: 5px;
             }
             a::after {
-                content: url("../images/arrow-right.png");
+                content: url("../images/arrow-right.svg");
+                margin-left: 3px;
             }
             p {
                 @include librery.defaultFont(14px, 22px, 400, #B3B3BA);
@@ -405,8 +408,8 @@ header {
             margin-bottom: 5px;
         }
         a::after {
-            content: url("../images/arrow-right.png");
-            vertical-align: middle
+            content: url("../images/arrow-right.svg");
+            margin-left: 3px;
         }
         h2 {
             @include librery.defaultFont(30px, 37px, 700, inherit);
@@ -423,6 +426,7 @@ header {
                 img {
                     width: 100%;
                     height: 200px;
+                    object-fit: cover;
                 }
                 .card-description {
                     display: flex;
@@ -558,6 +562,9 @@ footer {
             }
             .header-logo {
                 .tablet {
+                    display: block;
+                }
+                .mobil {
                     display: none;
                 }
             }
@@ -573,7 +580,7 @@ footer {
     }
     .hero {
         .hero-background {
-            background-image: url('../images/hero-logo-tablet.png');
+            background-image: url('../images/hero-logo-tablet.svg');
 
             .hero-title {
                 width: 800px
