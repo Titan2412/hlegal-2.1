@@ -15,169 +15,166 @@
     margin-right: auto;
 }
 
-header {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
+.section-background {
+    background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.804%,
+    rgb(50, 50, 100) 59.712%,rgb(100, 62, 114) 99.155%);
+}
 
-    .header-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "contacts contacts"
-        "logo nav";
+.hero {
+    background-image: url('../images/hero-logo-mobil.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
 
-        .header-contacts {
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(245, 245, 250, 0.2);
-            grid-area: contacts;
-            
-            p {
-                @include librery.defaultFont(16px, 20px, 400, #B3B3BA);
-                display: none;
-
-                &::before {
-                    content: '';
-                    display: block;
-                    width: 6px;
-                    height: 6px;
-                    background-color: #E6E6F0;
-                    border-radius: 50%;
-                }
-            }
-
-            a {
-                @include librery.defaultFont(16px, 20px, 700, #FFF);
-                @include librery.linkDecor;
-
-                &::before {
-                    content: '';
+    header {
+        position: static;
+        z-index: 1;
+        left: 0;
+        right: 0;
+    
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "contacts contacts"
+            "logo nav";
+    
+            .header-contacts {
+                padding: 10px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgba(245, 245, 250, 0.2);
+                grid-area: contacts;
+                
+                p {
+                    @include librery.defaultFont(16px, 20px, 400, #B3B3BA);
                     display: none;
-                    width: 6px;
-                    height: 6px;
-                    background-color: #E6E6F0;
-                    border-radius: 50%;
+    
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #E6E6F0;
+                        border-radius: 50%;
+                    }
                 }
-            }
-            .header-facebook {
-                display: none;
-
-                &::before {
-                    content: '';
-                    display: block;
-                    width: 6px;
-                    height: 6px;
-                    background-color: #E6E6F0;
-                    border-radius: 50%;
+    
+                a {
+                    @include librery.defaultFont(16px, 20px, 700, #FFF);
+                    @include librery.linkDecor;
+    
+                    &::before {
+                        content: '';
+                        display: none;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #E6E6F0;
+                        border-radius: 50%;
+                    }
                 }
-                svg:hover {
-                    path {
-                        fill: #F0145A;
+                .header-facebook {
+                    display: none;
+    
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #E6E6F0;
+                        border-radius: 50%;
+                    }
+                    svg:hover {
+                        path {
+                            fill: #F0145A;
+                        }
+                    }
+                }
+                .header-button {
+                    input {
+                        display: none;
+                    }
+                    input:checked + .lang-button {
+                        background-color: #F0145A;
+                        border-radius: 8px;
+                    }
+                    label {
+                        @include librery.defaultFont(12px, 15px, 700, #FFF);
+                        padding: 5px 7px; 
                     }
                 }
             }
-            .header-button {
-                input {
+            .header-logo {
+                display: flex;
+                grid-area: logo;
+                padding-left: 15px;
+    
+                .tablet {
                     display: none;
                 }
-                input:checked + .lang-button {
-                    background-color: #F0145A;
-                    border-radius: 8px;
+            }
+            .header-nav {
+                grid-area: nav;
+                padding-right: 15px;
+                padding-top: 15px;
+                
+                span {
+                    display: block;
+                    width: 18px;
+                    height: 2px;  
+                    background-color: #FFF;
+                    margin-bottom: 4px;
                 }
-                label {
-                    @include librery.defaultFont(12px, 15px, 700, #FFF);
-                    padding: 5px 7px; 
+                span:last-child {
+                    margin-bottom: 0;
                 }
-            }
-        }
-        .header-logo {
-            display: flex;
-            grid-area: logo;
-            padding-left: 15px;
-
-            .tablet {
-                display: none;
-            }
-        }
-        .header-nav {
-            grid-area: nav;
-            padding-right: 15px;
-            padding-top: 15px;
-            
-            span {
-                display: block;
-                width: 18px;
-                height: 2px;  
-                background-color: #FFF;
-                margin-bottom: 4px;
-            }
-            span:last-child {
-                margin-bottom: 0;
-            }
-            nav {
-                padding-left: 15px;
-                display: none;
-                a {
-                    @include librery.defaultFont(16px, 20px, 700, #FFF);
-                    text-decoration: none;
-                    margin-right: 15px;
-                }
-                a:last-child {
-                    margin-right: 0;
+                nav {
+                    padding-left: 15px;
+                    display: none;
+                    a {
+                        @include librery.defaultFont(16px, 20px, 700, #FFF);
+                        text-decoration: none;
+                        margin-right: 15px;
+                    }
+                    a:last-child {
+                        margin-right: 0;
+                    }
                 }
             }
         }
     }
-}
 
-.hero {
-    background: linear-gradient(208.37deg, rgb(50, 50, 100) 6.27%,
-    rgb(50, 50, 100) 58.463%);
-    height: 100vh;
+    .hero-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    .hero-background {
-        background-image: url('../images/hero-logo-mobil.svg');
-        background-size: cover;
+        h1 {
+            @include librery.defaultFont(38px, 46px, 700, #FFF);
+            text-align: center;
+        }
+    }
+
+    .hero-arrow {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 2px solid rgb(255, 255, 255);
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 15px;
+        background-image: url('../images/arrow-white.svg');
         background-repeat: no-repeat;
         background-position: center;
-        height: 100vh;
-
-        .hero-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            h1 {
-                @include librery.defaultFont(38px, 46px, 700, #FFF);
-                text-align: center;
-            }
-        }
-
-        .hero-arrow {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            border: 2px solid rgb(255, 255, 255);
-            position: absolute;
-            left: 50%;
-            right: 50%;
-            transform: translate(-50%, -50%);
-            bottom: 15px;
-            background-image: url('../images/arrow-white.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-        }
     }
 }
 
 .description {
-    background: linear-gradient(208.37deg, rgb(50, 50, 100) 6.27%,
-    rgb(50, 50, 100) 58.463%);
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -235,8 +232,6 @@ header {
 }
 
 .services {
-    background: linear-gradient(208.37deg, rgb(50, 50, 100) 0.151%,
-                    rgb(50, 50, 100) 59.861%,rgb(100, 62, 114) 99.841%);
     padding-top: 30px;
     padding-bottom: 60px;
     position: relative;
@@ -525,66 +520,65 @@ footer {
         padding-left: 60px;
         padding-right: 60px;
     }
-    header {
-        padding: 50px 60px;
+    .hero {    
+        background-image: url('../images/hero-logo-tablet.svg');
 
-        .header-container {
-            grid-template-columns: 1fr;
-            grid-template-areas: 
-            "contacts contacts"
-            "logo ."
-            'nav .';
+        header {
+            padding: 50px 60px;
     
-            .header-contacts {
-                justify-content: flex-start;
-                background-color: inherit;
-                gap: 6px;
-
-                p {
-                    display: flex;
-                    align-items: center;
+            .header-container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "contacts contacts"
+                "logo ."
+                'nav .';
+        
+                .header-contacts {
+                    justify-content: flex-start;
+                    background-color: inherit;
                     gap: 6px;
-                }
-                a {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-
-                    &::before {
-                        display: block;
+    
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+    
+                        &::before {
+                            display: block;
+                        }
+                    }
+                    .header-facebook {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
                     }
                 }
-                .header-facebook {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
+                .header-logo {
+                    .tablet {
+                        display: block;
+                    }
+                    .mobil {
+                        display: none;
+                    }
                 }
-            }
-            .header-logo {
-                .tablet {
-                    display: block;
-                }
-                .mobil {
-                    display: none;
-                }
-            }
-            .header-nav {
-                span {
-                    display: none;
-                }
-                nav {
-                    display: flex;
+                .header-nav {
+                    span {
+                        display: none;
+                    }
+                    nav {
+                        display: flex;
+                    }
                 }
             }
         }
-    }
-    .hero {
-        .hero-background {
-            background-image: url('../images/hero-logo-tablet.svg');
 
-            .hero-title {
-                width: 800px
-            }
+        .hero-title {
+            width: 800px
         }
     }
     .description {
@@ -723,38 +717,36 @@ footer {
 }
 
 @media (min-width: librery.$notebook) {
-    header {
-        padding: 50px 60px;
-
-        .header-container {
-            grid-template-areas: 
-            "logo contacts"
-            ". nav";
-    
-            .header-logo {
-                align-items: center;
-                grid-row-start: 1;
-                grid-row-end: 3;
-
-                .mobil {
-                    display: none;
-                }
-                .tablet {
-                    display: block;
-                }
-            }
-            .header-nav {
-                padding-top: 0;
-                nav {
-                    justify-content: flex-end;
-                }
-            }
-        }
-    }
     .hero {
-        .hero-background {
-            background-image: url('../images/hero-logo-notebook.svg');
+        background-image: url('../images/hero-logo-notebook.svg');
 
+        header {
+            padding: 50px 60px;
+    
+            .header-container {
+                grid-template-areas: 
+                "logo contacts"
+                ". nav";
+        
+                .header-logo {
+                    align-items: center;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+    
+                    .mobil {
+                        display: none;
+                    }
+                    .tablet {
+                        display: block;
+                    }
+                }
+                .header-nav {
+                    padding-top: 0;
+                    nav {
+                        justify-content: flex-end;
+                    }
+                }
+            }
         }
     }
     .description {
@@ -843,9 +835,7 @@ footer {
 
 @media (min-width: librery.$notebookHd) {
     .hero {
-        .hero-background {
-            background-size: contain;
-        }
+        background-size: contain;
     }
     .team {
         .container {
@@ -872,9 +862,7 @@ footer {
         padding-right: 160px;
     }
     .hero {
-        .hero-background {
-            background-image: url('../images/hero-logo-desktop.svg');
-        }
+        background-image: url('../images/hero-logo-desktop.svg');
     }
     .description {
         .category {
